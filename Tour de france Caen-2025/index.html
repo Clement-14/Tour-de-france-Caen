@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+        <meta charset="utf-8"/>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Tour de France 2025 - Caen</title>
+	<div style="background-image:url('[fond]');">
+    <style>
+        h1 { text-align: center; }
+        #countdown { 
+            font-size: 24px; 
+            text-align: center; 
+            margin-top: 20px; 
+            color: black; /* Changez cette couleur selon votre choix */
+        }
+    </style>
+</head>
+<body>
+    <h1>Le Tour de France 2025 - Caen</h1>
+    <p id="countdown">Début du contre-la-montre dans : </p>
+
+    <script>
+        // Date de l'événement
+        const eventDate = new Date("July 9, 2025 11:30:00").getTime();
+
+        // Mettre à jour le compte à rebours chaque seconde
+        const countdown = setInterval(() => {
+            const now = new Date().getTime();
+            const timeLeft = eventDate - now;
+
+            // Calcul des jours, heures, minutes et secondes restants
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            // Afficher le résultat
+            document.getElementById("countdown").innerHTML = 
+                `Début du contre-la-montre dans : ${days} jours, ${hours} heures, ${minutes} minutes, ${seconds} secondes`;
+
+            // Arrêter le compte à rebours lorsque la date est atteinte
+            if (timeLeft < 0) {
+                clearInterval(countdown);
+                document.getElementById("countdown").innerHTML = "Le contre-la-montre a commencé !";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
+
+<img src="logo caen.jpg" alt="logo-caen" style="width:150px; height:76px; position: absolute; top: 0; left: 0;">
+
+  <img src="TDF drapeau.jpg" alt="TDF drapeau" style="width:150px; height:112x; position: absolute; top: 0; right: 0;">
+		<link rel="stylesheet" href="styletrame.css">
+    </head>
+
+	<body>
+	<p> 
+<br><iframe width="560" height="315" src="https://www.youtube.com/embed/XMkiQFpFBlA?si=vqBRuKYxVBmTgLR0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	<br> <a href="Parcours 2024.html" > Parcours 2025 - Caen </a>
+	<footer>
+ <p style="color: black;"> © 2025 Caen</p>
+
+  </footer>
+  </body>
+</html>
